@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "tower-of-cindral",
+    "title": "The Tower of Cindral",
+    "engine": "Unreal Engine",
+    "levelType": "Vertical level",
+    "year": 2025,
+    "status": "published",
+    "summary": "A vertical level designed to teach the double jump without a single text tutorial.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Teach the double jump without breaking the pacing of vertical exploration or relying on a tutorial popup.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "A first guiding platform forces the short jump; the gap to the second one only closes with a double jump, read through silhouette rather than text. Three greybox iterations before moving to final art.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "In playtesting, 9 out of 10 players found the double jump on their own on the first attempt, without pausing or opening the help menu.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "shelter-09",
+    "title": "Shelter 09",
+    "engine": "Unity",
+    "levelType": "Combat encounter",
+    "year": 2024,
+    "status": "published",
+    "summary": "Combat design in tight spaces focused on managing limited resources.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Make a cramped interior feel tense rather than cramped, while keeping the player's limited ammo count readable at a glance.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "Encounters are staged around sightlines instead of enemy count — fewer enemies, more angles. Resource pickups are placed to reward exploration over hoarding.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "Average ammo usage across playtests dropped by 30% once pickups were repositioned, without reducing perceived difficulty.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "dry-basin",
+    "title": "Dry Basin",
+    "engine": "Godot",
+    "levelType": "Open exploration",
+    "year": 2024,
+    "status": "draft",
+    "summary": "Non-linear exploration using environmental signposting instead of maps or markers.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Guide players across a large open basin without a minimap, quest markers, or compass.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "Landmarks are placed on a readable skyline, and erosion patterns in the terrain itself hint at the route to water.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "Players reached the first landmark in under four minutes on average, with no verbal or UI guidance.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "last-train",
+    "title": "Last Train",
+    "engine": "Unreal Engine",
+    "levelType": "Linear sequence",
+    "year": 2023,
+    "status": "published",
+    "summary": "A linear sequence building tension through encounter pacing and lighting.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Build dread across a ten-minute linear sequence without repeating the same scare twice.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "Three escalating encounter types are interleaved with quiet beats, and lighting gradually narrows the player's field of safety.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "Heart-rate data from playtests showed a steady climb across the sequence rather than isolated spikes.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "inner-courtyard",
+    "title": "Inner Courtyard",
+    "engine": "Unity",
+    "levelType": "Co-op puzzle",
+    "year": 2023,
+    "status": "published",
+    "summary": "A co-op puzzle prototype tested with two players on the same screen.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Design puzzles that require real communication between two players sharing one screen, not just parallel button-pressing.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "Each player sees information the other cannot, forcing them to describe what they see out loud to solve each room.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "Every tested pair solved the final room through conversation alone, with no shared visual confirmation.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "block-zero",
+    "title": "Block Zero",
+    "engine": "Godot",
+    "levelType": "Greybox study",
+    "year": 2022,
+    "status": "published",
+    "summary": "A greybox level iterated twelve times based on playtest data.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "text": "Validate a core traversal loop before committing any art budget to the level.",
+        "images": ["", "", ""]
+      },
+      {
+        "heading": "The Solution",
+        "text": "Twelve greybox passes, each changing one variable — sightline height, jump distance, or checkpoint spacing — tested with the same five players.",
+        "images": ["", ""]
+      },
+      {
+        "heading": "Result",
+        "text": "Completion time variance across testers dropped from 6 minutes to under 90 seconds by the final pass.",
+        "images": []
+      }
+    ]
+  }
+]

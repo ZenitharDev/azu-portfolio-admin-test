@@ -1,0 +1,119 @@
+:root {
+  --bg: #0b0b0c;
+  --surface: #141416;
+  --border: rgba(244, 241, 236, 0.08);
+  --border-strong: rgba(244, 241, 236, 0.15);
+  --text: #f4f1ec;
+  --text-muted: #9b9b9f;
+  --text-faint: #55555a;
+  --red: #e63946;
+  --green: #59c47a;
+  --max-width: 1280px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--red);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+@media (max-width: 720px) {
+  .wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.placeholder {
+  width: 100%;
+  background: linear-gradient(135deg, #1c1c1f, #0e0e10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-align: center;
+  padding: 16px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.tag--accent {
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.tag--muted {
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid var(--red);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(230, 57, 70, 0.1);
+  color: var(--text);
+}
+
+.link-underline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 6px;
+  color: var(--text);
+}

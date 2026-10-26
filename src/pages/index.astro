@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import EntryCard from '../components/EntryCard.astro';
+import about from '../data/about.json';
+import entries from '../data/entries.json';
+
+const published = entries.filter((e) => e.status === 'published');
+---
+
+<Layout title={`${about.name} — Level Designer`} description={about.heroText}>
+  <Nav />
+
+  <section class="wrap" style="padding-top: 140px; padding-bottom: 100px">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 28px">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0"></span>
+      <span style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted)">
+        {about.role}
+      </span>
+    </div>
+    <h1 style="font-family: var(--font-display); font-weight: 700; font-size: clamp(48px, 8vw, 112px); line-height: 0.95; margin: 0; letter-spacing: -0.02em">
+      {about.name.split(' ')[0]}<br />{about.name.split(' ').slice(1).join(' ')}
+    </h1>
+    <p style="max-width: 560px; margin: 32px 0 0; font-size: 18px; line-height: 1.6; color: #c9c7c3">
+      {about.heroText}
+    </p>
+    <div style="display: flex; align-items: center; gap: 20px; margin-top: 40px; flex-wrap: wrap">
+      <a href="#work" class="link-underline">View Work ↓</a>
+      <a href={about.resumeUrl} class="btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="wrap" style="padding-bottom: 100px">
+    <div style="border-top: 1px solid var(--border); padding-top: 56px; display: flex; gap: 64px; flex-wrap: wrap">
+      <h2 style="font-family: var(--font-display); font-size: 28px; font-weight: 600; margin: 0; flex: 0 0 auto">About</h2>
+      <p style="flex: 1 1 480px; min-width: 280px; font-size: 16px; line-height: 1.7; color: #c9c7c3; margin: 0">
+        {about.aboutText}
+      </p>
+    </div>
+  </section>
+
+  <section id="work" class="wrap" style="padding-bottom: 120px">
+    <div
+      style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 48px; border-top: 1px solid var(--border); padding-top: 40px"
+    >
+      <h2 style="font-family: var(--font-display); font-size: 28px; font-weight: 600; margin: 0">Work</h2>
+      <span style="font-size: 13px; color: var(--text-muted)">{String(published.length).padStart(2, '0')} entries</span>
+    </div>
+
+    <div class="work-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+      {
+        published.map((entry) => (
+          <EntryCard
+            slug={entry.slug}
+            title={entry.title}
+            engine={entry.engine}
+            year={entry.year}
+            summary={entry.summary}
+            heroImage={entry.heroImage}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  @media (max-width: 720px) {
+    .work-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

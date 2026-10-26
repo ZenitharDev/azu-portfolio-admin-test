@@ -1,0 +1,70 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Placeholder from '../../../components/Placeholder.astro';
+import entries from '../../../data/entries.json';
+import { withBase } from '../../../utils/url';
+
+export function getStaticPaths() {
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<Layout title={`${entry.title} — Level Design`} description={entry.summary}>
+  <Nav backLink={{ href: withBase('#work'), label: '← Back to work' }} />
+
+  <header class="wrap" style="max-width: 860px; padding-top: 72px; padding-bottom: 32px">
+    <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap">
+      <span class="tag tag--accent">{entry.engine}</span>
+      <span class="tag tag--muted">{entry.levelType}</span>
+      <span class="tag tag--muted">{entry.year}</span>
+    </div>
+    <h1 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 700; margin: 0 0 20px; line-height: 1.05">
+      {entry.title}
+    </h1>
+    <p style="font-size: 17px; color: #c9c7c3; line-height: 1.6; max-width: 680px; margin: 0">{entry.summary}</p>
+  </header>
+
+  <div class="wrap" style="margin-top: 24px">
+    <Placeholder src={entry.heroImage} alt="Level hero image" height="480px" />
+  </div>
+
+  <section class="wrap" style="max-width: 860px; padding-top: 64px; display: flex; flex-direction: column; gap: 48px">
+    {
+      entry.sections.map((section) => (
+        <div>
+          <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0 0 12px">{section.heading}</h2>
+          <p style="font-size: 16px; line-height: 1.7; color: #c9c7c3; margin: 0 0 24px">{section.text}</p>
+          {section.images.length > 0 && (
+            <div
+              class="entry-gallery"
+              style={`display: grid; grid-template-columns: repeat(${section.images.length === 3 ? 3 : 2}, minmax(0, 1fr)); gap: 16px`}
+            >
+              {section.images.map((img: string) => (
+                <Placeholder src={img} alt={`${entry.title} detail`} height="200px" />
+              ))}
+            </div>
+          )}
+        </div>
+      ))
+    }
+  </section>
+
+  <footer class="wrap" style="max-width: 860px; margin-top: 64px; padding-top: 40px; padding-bottom: 64px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px">
+    <a href={withBase('#work')} class="link-underline">← All work</a>
+    <span style="font-size: 13px; color: var(--text-muted)">© 2026 Azul Mousseigne</span>
+  </footer>
+</Layout>
+
+<style>
+  @media (max-width: 600px) {
+    .entry-gallery {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

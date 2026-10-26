@@ -1,0 +1,35 @@
+---
+import Logo from './Logo.astro';
+import { withBase } from '../utils/url';
+
+interface Props {
+  backLink?: { href: string; label: string };
+}
+
+const { backLink } = Astro.props;
+---
+
+<nav
+  class="wrap"
+  style="display: flex; justify-content: space-between; align-items: center; padding-top: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border)"
+>
+  {
+    backLink ? (
+      <>
+        <a href={backLink.href} style="color: var(--text-muted); text-decoration: none; font-size: 14px">
+          {backLink.label}
+        </a>
+        <Logo />
+      </>
+    ) : (
+      <>
+        <Logo />
+        <div style="display: flex; gap: 40px; font-size: 14px; color: var(--text-muted)">
+          <a href={withBase('#work')} style="color: inherit; text-decoration: none">Work</a>
+          <a href={withBase('#about')} style="color: inherit; text-decoration: none">About</a>
+          <a href={withBase('#contact')} style="color: inherit; text-decoration: none">Contact</a>
+        </div>
+      </>
+    )
+  }
+</nav>

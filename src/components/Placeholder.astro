@@ -1,0 +1,21 @@
+---
+interface Props {
+  src?: string;
+  alt: string;
+  label?: string;
+  height: string;
+  style?: string;
+}
+
+const { src, alt, label, height, style = '' } = Astro.props;
+---
+
+{
+  src ? (
+    <img src={src} alt={alt} style={`width: 100%; height: ${height}; object-fit: cover; border-radius: 4px; ${style}`} />
+  ) : (
+    <div class="placeholder" style={`height: ${height}; ${style}`}>
+      {label ?? alt}
+    </div>
+  )
+}

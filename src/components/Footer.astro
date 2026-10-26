@@ -1,0 +1,16 @@
+---
+import about from '../data/about.json';
+---
+
+<footer
+  id="contact"
+  class="wrap"
+  style="padding-top: 48px; padding-bottom: 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px"
+>
+  <span style="font-size: 13px; color: var(--text-muted)">© 2026 {about.name}</span>
+  <div style="display: flex; gap: 28px; font-size: 13px; color: var(--text-muted)">
+    <a href={about.social.linkedin} style="color: inherit; text-decoration: none">LinkedIn</a>
+    <a href={about.social.itch} style="color: inherit; text-decoration: none">Itch.io</a>
+    <a href={about.social.email} style="color: inherit; text-decoration: none">Email</a>
+  </div>
+</footer>
