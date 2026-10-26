@@ -12,12 +12,19 @@
       {
         "heading": "The Challenge",
         "text": "Teach the double jump without breaking the pacing of vertical exploration or relying on a tutorial popup.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "A first guiding platform forces the short jump; the gap to the second one only closes with a double jump, read through silhouette rather than text. Three greybox iterations before moving to final art.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
@@ -39,12 +46,19 @@
       {
         "heading": "The Challenge",
         "text": "Make a cramped interior feel tense rather than cramped, while keeping the player's limited ammo count readable at a glance.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "Encounters are staged around sightlines instead of enemy count — fewer enemies, more angles. Resource pickups are placed to reward exploration over hoarding.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
@@ -66,12 +80,19 @@
       {
         "heading": "The Challenge",
         "text": "Guide players across a large open basin without a minimap, quest markers, or compass.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "Landmarks are placed on a readable skyline, and erosion patterns in the terrain itself hint at the route to water.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
@@ -93,12 +114,19 @@
       {
         "heading": "The Challenge",
         "text": "Build dread across a ten-minute linear sequence without repeating the same scare twice.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "Three escalating encounter types are interleaved with quiet beats, and lighting gradually narrows the player's field of safety.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
@@ -120,12 +148,19 @@
       {
         "heading": "The Challenge",
         "text": "Design puzzles that require real communication between two players sharing one screen, not just parallel button-pressing.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "Each player sees information the other cannot, forcing them to describe what they see out loud to solve each room.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
@@ -147,16 +182,40 @@
       {
         "heading": "The Challenge",
         "text": "Validate a core traversal loop before committing any art budget to the level.",
-        "images": ["", "", ""]
+        "images": [
+          "",
+          "",
+          ""
+        ]
       },
       {
         "heading": "The Solution",
         "text": "Twelve greybox passes, each changing one variable — sightline height, jump distance, or checkpoint spacing — tested with the same five players.",
-        "images": ["", ""]
+        "images": [
+          "",
+          ""
+        ]
       },
       {
         "heading": "Result",
         "text": "Completion time variance across testers dropped from 6 minutes to under 90 seconds by the final pass.",
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "test-entry-ñ",
+    "title": "Prueba Ñandú 日本",
+    "engine": "Unreal Engine",
+    "levelType": "Test",
+    "year": 2026,
+    "status": "draft",
+    "summary": "Entrada de prueba creada por el script de verificación.",
+    "heroImage": "",
+    "sections": [
+      {
+        "heading": "Test",
+        "text": "Texto de prueba.",
         "images": []
       }
     ]
