@@ -202,22 +202,5 @@
         "images": []
       }
     ]
-  },
-  {
-    "slug": "test-entry-ñ",
-    "title": "Prueba Ñandú 日本",
-    "engine": "Unreal Engine",
-    "levelType": "Test",
-    "year": 2026,
-    "status": "draft",
-    "summary": "Entrada de prueba creada por el script de verificación.",
-    "heroImage": "",
-    "sections": [
-      {
-        "heading": "Test",
-        "text": "Texto de prueba.",
-        "images": []
-      }
-    ]
   }
 ]
